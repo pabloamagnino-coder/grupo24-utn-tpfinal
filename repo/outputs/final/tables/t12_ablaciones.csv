@@ -1,0 +1,10 @@
+,PR-AUC,PR-AUC desvío,resultado neto (USD M),% rechazado,Δ PR-AUC (puntos),Δ resultado (USD M)
+Modelo final (referencia),0.6208,0.0004,179.7489,20.0,0.0,0.0
+Con Credit_Worthiness (descartada),0.6251,0.001,180.5594,20.0,0.4246,0.8104
+Con submission_of_application (descartada),0.6273,0.0007,183.6559,20.0,0.6497,3.907
+Con las dos descartadas,0.632,0.0002,184.7457,20.0,1.1117,4.9968
+"H1 · sin capacidad de pago (dtir1, income, lti, ingreso_cero)",0.497,0.0001,157.2187,20.0,-12.3811,-22.5302
+"H2 · sin garantía (LTV, property_value)",0.5543,0.0004,165.5497,20.0,-6.6494,-14.1993
+H3 · sin estructura del producto,0.517,0.0007,162.7062,20.0,-10.3871,-17.0428
+H4 · sin Credit_Score,0.6217,0.0003,179.4097,20.0,0.0913,-0.3392
+Con Gender y age (atributos protegidos),0.6222,0.0005,180.2248,20.0,0.136,0.4759

@@ -1,0 +1,24 @@
+,|SHAP| medio
+LTV,0.45942068
+dtir1,0.3245122
+loan_purpose,0.24566242
+Neg_ammortization,0.18944122
+loan_type,0.18455264
+lti,0.16685417
+income,0.15660992
+co-applicant_credit_type,0.13374859
+Region,0.11842241
+lump_sum_payment,0.094374195
+property_value,0.09374374
+occupancy_type,0.073589414
+loan_limit,0.066715576
+term,0.05578205
+approv_in_adv,0.05425258
+loan_amount,0.05227039
+Credit_Score,0.039014846
+business_or_commercial,0.037753552
+interest_only,0.022168536
+total_units,0.015094768
+credit_type,0.011635962
+ingreso_cero,0.005275237
+open_credit,0.0010510832

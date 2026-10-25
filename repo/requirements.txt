@@ -1,0 +1,9 @@
+# Versiones con las que se obtuvieron los resultados del informe.
+# scikit-learn y xgboost van fijas: el desempate entre HistGradientBoosting y XGBoost depende de ellas.
+scikit-learn==1.8.0
+xgboost==3.2.0
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+shap>=0.46
+jupyter

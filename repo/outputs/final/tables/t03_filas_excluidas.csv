@@ -1,0 +1,4 @@
+criterio,filas,motivo
+credit_type = EQUI o property_value vacío,15300,Bloque con 100% de mora: artefacto de construcción del dataset (sección 1.3)
+age vacío (y submission_of_application vacío),0,"200 filas, todas en mora: mismo tipo de artefacto"
+"Secured_by = land (construction_type = mh, Security_Type = Indriect)",33,"33 filas, todas en mora: mismo tipo de artefacto"
