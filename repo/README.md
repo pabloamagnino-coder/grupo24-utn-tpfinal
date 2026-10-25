@@ -25,7 +25,9 @@ Las cifras en dólares son una simulación con margen de 3% y recupero de la gar
 
 ### Cómo se eligió el modelo
 
-En la validación cruzada, HistGradientBoosting y XGBoost quedan empatados (PR-AUC 0,618 los dos). La regla fijada antes de modelar desempata por calibración (Brier) y ahí la diferencia es mínima: 0,0921 para XGBoost contra 0,0922 para HistGradientBoosting. Una diferencia tan chica puede invertirse con otra versión de scikit-learn, por eso fijamos las versiones con las que se obtuvieron los resultados: **scikit-learn 1.8.0 y xgboost 3.2.0**. En Colab, la primera celda del notebook las instala. Si se ejecuta con otras versiones y el desempate se invierte, el notebook lo avisa y mantiene XGBoost, el modelo del informe.
+En la validación cruzada, HistGradientBoosting y XGBoost quedan empatados (PR-AUC 0,618 los dos). La regla fijada antes de modelar desempata por calibración (Brier) y ahí la diferencia es mínima: 0,0921 para XGBoost contra 0,0922 para HistGradientBoosting.
+
+Los resultados del informe se obtuvieron con **scikit-learn 1.8.0 y xgboost 3.2.0** (en Colab, la primera celda del notebook las instala) en una computadora de 12 núcleos. Aun con esas versiones y las mismas semillas, XGBoost da valores levemente distintos según el entorno, porque su muestreo aleatorio de filas y columnas depende de dónde se ejecuta (por ejemplo, de la cantidad de núcleos del procesador). En Colab, eso alcanza para invertir dos decisiones que estaban empatadas: el desempate entre modelos (Brier 0,09217 contra 0,09219) y la búsqueda de hiperparámetros (0,6151 contra 0,6150, así que usa la configuración ajustada en lugar de la de fábrica). El notebook avisa el primer caso y mantiene XGBoost, el modelo del informe. Los resultados en test cambian poco: PR-AUC 0,622 en lugar de 0,621, 54,4% de moras detectadas en lugar de 54,6% y 19,0% de rechazo en lugar de 19,4%. Las conclusiones no cambian.
 
 ---
 
@@ -72,7 +74,7 @@ pip install -r requirements.txt
 jupyter notebook Prediccion_mora_hipotecaria.ipynb
 ```
 
-La ejecución completa tarda unos 10-15 minutos. Las semillas y las versiones son fijas, así que los resultados se reproducen.
+La ejecución completa tarda unos 10 minutos en una computadora de 12 núcleos y unos 25 en Colab. Las semillas y las versiones son fijas: en la misma computadora los resultados se reproducen exactamente, y en otro entorno XGBoost puede variar levemente (ver "Cómo se eligió el modelo").
 
 ---
 
